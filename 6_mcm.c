@@ -56,6 +56,7 @@ int mcm_tabulation(int arr[], int n) {
 
     // L = chain length
     for (int L = 2; L < n; L++) {
+        // i, j formula for indexes above diagonal
         for (int i = 1; i < n - L + 1; i++) {
             int j = i + L - 1;
             m[i][j] = INT_MAX;
