@@ -62,17 +62,6 @@ void bellmanFord(int src) {
         }
     }
 
-    // Check negative cycle
-    for (int u = 0; u < V; u++) {
-        for (int v = 0; v < V; v++) {
-            if (graph[u][v] != 0 && dist[u] != INT_MAX &&
-                dist[u] + graph[u][v] < dist[v]) {
-                printf("\nGraph contains negative weight cycle!\n");
-                return;
-            }
-        }
-    }
-
     printf("\nBellman-Ford Result:\n");
     for (int i = 0; i < V; i++)
         printf("Distance from %d to %d = %d\n", src, i, dist[i]);

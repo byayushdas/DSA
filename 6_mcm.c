@@ -70,7 +70,7 @@ int mcm_tabulation(int arr[], int n) {
             }
         }
     }
-
+    //cost of multiplying from A₁ to Aₙ
     return m[1][n - 1];
 }
 
